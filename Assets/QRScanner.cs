@@ -14,7 +14,7 @@ public class QRScanner : MonoBehaviour
     void Start()
     {
         WebCamDevice[] devices = WebCamTexture.devices;
-        webcamTexture = new WebCamTexture(devices[2].name);
+        webcamTexture = new WebCamTexture(devices[0].name);
         GetComponent<Renderer>().material.mainTexture = webcamTexture;
         StartCoroutine(GetQRCode());
         webcamTexture.Play();
