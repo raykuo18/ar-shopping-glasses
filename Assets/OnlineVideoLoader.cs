@@ -8,19 +8,25 @@ public class OnlineVideoLoader : MonoBehaviour
      
     public VideoPlayer videoPlayer;
     public string videoUrl = "yourvideourl";
-     
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        videoPlayer.url = videoUrl;
-        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
-        videoPlayer.EnableAudioTrack (0, true);
-        videoPlayer.Prepare ();
+        
+ 
     }
  
     // Update is called once per frame
     void Update()
     {
          
+    }
+
+    public void Setting(){
+        videoPlayer.url = videoUrl;
+        videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.EnableAudioTrack(0, true);
+        videoPlayer.Prepare();
+        Debug.Log("video prepared");
     }
 }
